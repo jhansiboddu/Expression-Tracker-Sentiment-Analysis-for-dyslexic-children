@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=OpenDyslexic&display=swap');
+
+body {
+  background-color: rgb(0, 213, 255);
+  font-family: 'OpenDyslexic', sans-serif;
+}
+
+.inst {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.head {
+  border: 3px solid rgb(133, 120, 103);
+  margin: 20px;
+  padding: 10px;
+  background-color: rgb(234, 220, 200);
+  width: 100%;
+  max-width: 1400px;
+  border-radius: 30px;
+}
+
+.outerDiv {
+  margin: 30px;
+  background-color: rgb(234, 220, 200);
+  border: 3px solid rgb(133, 120, 103);
+  border-radius: 30px;
+}
+
+.inst > div {
+  flex: 1;
+  text-align: center;
+}
+
+.grid-container {
+  display: flex;
+  justify-content: center;
+}
+
+.grid-container > div {
+  display: grid;
+  background-color: rgb(0, 213, 255);
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: center;
+  align-items: center;
+  grid-gap: 10px;
+}
+
+.left-buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.right-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  margin-left: 15vw;
+}
+
+.letter-button {
+  background-color: rgb(255, 215, 0);
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 30px;
+  box-shadow: 4px 2px 5px 2px rgb(226, 159, 71);
+}
+
+.letter-button:hover {
+  background-color: rgb(255, 215, 0);
+}
+
+.word-button {
+  background-color: rgb(233, 188, 104);
+  margin: 5px;
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 50px;
+  box-shadow: 4px 2px 5px 2px rgb(230, 136, 15);
+}
+
+.word-button:hover {
+  background-color: rgb(255, 165, 0);
+}
+
+.nextButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes celebration {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.correct-animation {
+  animation-name: celebration;
+  animation-duration: 0.4s;
+  animation-iteration-count: 1;
+  background-color: #ffd700;
+  box-shadow: 0 0 10px #00ff15;
+}
+
+@keyframes blink-red {
+  0%, 100% {
+    background-color: rgb(255, 215, 0);
+  }
+  50% {
+    background-color: red;
+  }
+}
+
+.incorrect-animation {
+  animation: blink-red 0.7s normal;
+}
+
+.end-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #e7dbdb;
+  height: 100vh;
+}
+
+.result {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.button-group-horizontal {
+  box-shadow: 5px 5px 5px 5px rgb(212, 174, 137);
+  padding: 10px;
+  width: 75%;
+  max-width: 400px;
+  margin: 10px auto;
+  border-radius: 30px;
+}
+
+.button-group-vertical {
+  display: flex;
+  flex-direction: column;
+  margin-right: 50px;
+  margin-top: 10px;
+}
